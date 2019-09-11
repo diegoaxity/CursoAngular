@@ -1,9 +1,9 @@
-<div class="login-container">
+<div class="login-container" [formGroup]="formLogin">
   <mat-form-field>
-    <input type="text" matInput placeholder="Email">
+    <input type="text" matInput placeholder="Email" formControlName="email" required>
   </mat-form-field>
   <mat-form-field>
-    <input type="password" matInput placeholder="Password">
+    <input type="password" matInput placeholder="Password" formControlName="password" required>
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="login()">Entrar</button>
+  <button mat-raised-button color="primary" (click)="login()" [disabled]="formLogin.invalid">Entrar</button>
 </div>

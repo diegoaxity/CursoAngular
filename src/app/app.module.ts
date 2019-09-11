@@ -6,17 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MoneyPipe } from './pipes/money.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    MoneyPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
