@@ -16,4 +16,16 @@ export class DataService {
   getIsLoading(): Observable<boolean> {
     return this.loading.asObservable();
   }
+
+  setToken(token: string) {
+    sessionStorage.setItem('token', token);
+  }
+
+  getToken(): string {
+    return sessionStorage.getItem('token');
+  }
+
+  removeToken() {
+    sessionStorage.removeItem('token');
+  }
 }

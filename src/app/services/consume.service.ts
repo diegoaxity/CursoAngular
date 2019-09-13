@@ -13,4 +13,8 @@ export class ConsumeService {
   login(body: any): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.baseUrl}login`, body);
   }
+
+  getUser(): Observable<any> {
+    return this.http.get(`${this.baseUrl}users/2`);
+  }
 }
